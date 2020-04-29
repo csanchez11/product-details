@@ -1,0 +1,35 @@
+{
+  "name": "product-details-page",
+  "version": "1.0",
+  "description": "building a frontend clone of lululemon",
+  "author": "chris sanchez",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "build": "webpack -d --watch",
+    "start": "nodemon server/index.js",
+    "db-seed": "node ./DB/seed.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "mysql2": "^1.7.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "sequelize": "^5.19.1",
+    "mongodb": "3.5.7",
+    "mongoose": "5.9.10"
+  },
+  "devDependencies": {
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.2.1"
+  }
+}
