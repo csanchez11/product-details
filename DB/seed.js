@@ -5,6 +5,9 @@ const features = ["Buttery-soft", "Bonded eyelets for ventilation", "Centre-back
 const materials = ["Body: 100% Polyester", "Body: 80% Nylon, 20% Lycra® Elastane", "Body: 69% Nylon, 31% Lycra® Elastane", "Body: 77% Nylon, 23% Lycra® Elastane"];
 const designedFor = ["Yoga", "Running", "On the Move", "Training"];
 const whyMade = ["Let the intensity rise. This was designed to keep things ventilated and dry as you get sweaty.", "Your practice has never felt so good. This was designed to minimize distractions and maximize comfort as you flow through your workout.", "Calm is always just a practice away. Nearly seamless and pocket-free to make floor work extra comfortable.", "Long live burpees. We made this with zipper-free storage to keep intense movement and floor work comfortable.", "From quad-burner hill sprints to feels-so-good floor stretches, these have got you covered.", "Focus on your strength, not your sweat. Powered by our fastest-drying fabric, this ultra-breathable piece handles heat and sweat during intense workouts.", "You asked, we listened. This updated collection has an improved fit and added spandex so it won’t bag out during sweaty workouts. Your favourite piece just got better."];
+let imgurlCount = 1;
+
+// let imgurl = `https://lulu-fec.s3.us-east-2.amazonaws.com/image${imgurlCount}.jpeg`
 
 // Create a product that consists of a why made paragraph, materials list, features, and activity it was designed for
 const createProduct = () => {
@@ -17,6 +20,10 @@ const createProduct = () => {
   product.whyMade = whyMade[Math.floor(Math.random() * whyMade.length)];
   // Add random material composition
   product.materials = materials[Math.floor(Math.random() * materials.length)]
+  product.imgurl1 = `https://lulu-fec.s3.us-east-2.amazonaws.com/image${imgurlCount}.jpeg`;
+  imgurlCount++;
+  product.imgurl2 = `https://lulu-fec.s3.us-east-2.amazonaws.com/image${imgurlCount}.jpeg`;
+  imgurlCount++;
 
   return product;
 };
@@ -56,4 +63,4 @@ const seedData = () => {
 // seedData();
 // let randNumb = Math.floor( (Math.random() * 6) + 4);
 // console.log( buildFeatureList(Math.floor( (Math.random() * 6) + 4)) );
-console.log(createProducts(2));
+console.log(createProducts(3));
