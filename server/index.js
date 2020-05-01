@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
+const helper = require('../DB/dbHelpers.js');
 
 const app = express()
 const port = 3010
@@ -13,6 +14,18 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.get('/products/:id', (req, res) => res.send("Hello World"))
+
+// This will retrieve and send a single product to page by selected by id
+app.get('/products/:id', (req, res) => {
+
+  helper.getProduct(req.params, (err, results) => {
+    if (err) {console.error(err)}
+    else {
+      res.status(200).send(results)
+    }
+  })
+})
+
+
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
