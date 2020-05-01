@@ -13,6 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-app.get('/api', (req, res) => res.send("Hello World"))
+app.get('/products/:id', (req, res) => res.send("Hello World"))
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`))

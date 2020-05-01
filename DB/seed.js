@@ -1,4 +1,5 @@
-// IMPORT DB HELPERS AND DB ACCESS
+// IMPORT DB HELPERS
+const helper = require('dbHelpers.js');
 
 
 const features = ["Buttery-soft", "Bonded eyelets for ventilation", "Centre-back Tape works as a locker loop", "Abrasion-resistant", "Sweat-wicking", "Quick-drying", "Seemless constructions", "Engineered ventilation zones", "Four-way stretch", "Lightweight", "Sweat-wicking", "High Rise, 21 Inch Inseam", "Waistband pocket", "Waistband lies flat and won't dig in", "Breathable", "Added Lycra® fibre for stretch and shape retention", "Smooth cool feel", "Pocket holds your key or card", "Drawcord to customize fit", "High-coverage", "Mesh fabric panels for ventilation", "Feels barely there", "Low-friction performance", "Lightweight coverage", "Supportive", "Hidden waistband pocket", "Updated Fit", "Minimal seams to reduce chafe", "Soft"];
