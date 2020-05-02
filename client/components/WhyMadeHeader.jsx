@@ -1,7 +1,6 @@
 import React from 'react';
 
 const WhyMadeHeader = (props) => {
-  console.log(props.product.imgurl1, "Props.product from inside WhyHeader");
     return (
       <div id="wrapper">
         <div id="whyMade">
@@ -15,14 +14,10 @@ const WhyMadeHeader = (props) => {
         <div id="image-section">
           <span>
             <picture id="whyMadeImage1">
-              <source>
-                {/* <img src={props.product.imgurl1} /> */}
-              </source>
+              <img src={props.product.imgurl1} />
             </picture>
             <picture id="whyMadeImage2">
-              <source>
-                {/* <img src={props.product.imgurl2} /> */}
-              </source>
+              <img src={props.product.imgurl2} />
             </picture>
           </span>
         </div>
