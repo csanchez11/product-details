@@ -14,7 +14,7 @@ export default class App extends React.Component {
 
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.getProduct();
   }
 
