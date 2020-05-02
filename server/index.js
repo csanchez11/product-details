@@ -21,7 +21,7 @@ app.get('/products/:id', (req, res) => {
   helper.getProduct(req.params, (err, results) => {
     if (err) {console.error(err)}
     else {
-      res.status(200).send(results)
+      res.status(200).send(results[0])
     }
   })
 })
