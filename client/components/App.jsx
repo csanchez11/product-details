@@ -2,6 +2,7 @@ import React from 'react';
 import WhyMadeHeader from './WhyMadeHeader.jsx'
 import Accordion from './Accordion.jsx'
 import axios from 'axios';
+import styled from "styled-components";
 
 export default class App extends React.Component {
   constructor(props){
