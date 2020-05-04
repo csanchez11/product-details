@@ -1,26 +1,59 @@
 import React from 'react';
-import styled from "styled-components";
-// import Card from 'react-bootstrap/Card';
+import styled from 'styled-components';
 
-export default class App extends React.Component {
+const AccordWrapper = styled.div`
+`;
+
+const OuterAccord = styled.div`
+`;
+
+const InnerAccord = styled.div`
+background-color: #EEE;
+opacity: ${props => (props.open ? "1" : "0")};
+max-height: ${props => (props.open ? "100%" : "0")};
+overflow: hidden;
+padding: ${props => (props.open ? "15px" : "0 15px")};
+transition: all 0.3s;
+`;
+
+
+export default class Accordion extends React.Component {
   constructor(props){
     super(props)
 
     this.state ={
+      heroFeatureOpen: false,
+      productFeaturesOpen: false,
+      materialsOpen: false,
     }
 
+    this.toggleHeroOpen = this.toggleHeroOpen.bind(this);
+    this.toggleProdsOpen = this.toggleProdsOpen.bind(this);
+    this.toggleMaterialsOpen = this.toggleMaterialsOpen.bind(this);
+  }
+
+  toggleHeroOpen(e){
+    this.setState({ heroFeatureOpen : !this.state.heroFeatureOpen });
+  }
+
+  toggleProdsOpen(e){
+    this.setState({ productFeaturesOpen : !this.state.productFeaturesOpen });
+  }
+
+  toggleMaterialsOpen(e){
+    this.setState({ materialsOpen : !this.state.materialsOpen });
   }
 
   render() {
     return (
-      <div id="accordion-wrapper">
+      <AccordWrapper>
         <div>
           <h3>
             <svg></svg>
             <span>Designed for {this.props.designed_for}</span>
           </h3>
         </div>
-        <div id="first-prod-feature">
+        <OuterAccord id="hero-prod-feature" onClick={this.toggleHeroOpen}>
           <div id="accordion-grid">
             <h3>
               <svg></svg>
@@ -28,7 +61,7 @@ export default class App extends React.Component {
               <div id="plus-minus"></div>
             </h3>
           </div>
-          <div id="inner-accord-item-1">
+          <InnerAccord open={this.state.heroFeatureOpen}>
             <div id="grid-inner-accord">
               <ul id="feature-list">
                 <li key="1">
@@ -42,9 +75,9 @@ export default class App extends React.Component {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-        <div id="prod-feature-container">
+          </InnerAccord>
+        </OuterAccord>
+        <OuterAccord id="prod-feature-container" onClick={this.toggleProdsOpen}>
           <div id="accordion-grid">
             <h3>
               <svg></svg>
@@ -52,7 +85,7 @@ export default class App extends React.Component {
               <div id="plus-minus"></div>
             </h3>
           </div>
-          <div id="inner-accord-item-2">
+          <InnerAccord open={this.state.productFeaturesOpen}>
             <div id="grid-inner-accord">
               <ul>
                 {this.props.features.slice(4).map((element, index) => {
@@ -65,9 +98,9 @@ export default class App extends React.Component {
                 }
               </ul>
             </div>
-          </div>
-        </div>
-        <div id="first-prod-feature">
+          </InnerAccord>
+        </OuterAccord>
+        <OuterAccord id="materials-care" onClick={this.toggleMaterialsOpen}>
           <div id="accordion-grid">
             <h3>
               <svg></svg>
@@ -75,7 +108,7 @@ export default class App extends React.Component {
               <div id="plus-minus"></div>
             </h3>
           </div>
-          <div id="inner-accord-item-3">
+          <InnerAccord open={this.state.materialsOpen}>
             <div id="grid-inner-accord">
               <div id="materials-text">Materials</div>
               <ul id="material-list">
@@ -108,9 +141,9 @@ export default class App extends React.Component {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
+          </InnerAccord>
+        </OuterAccord>
+      </AccordWrapper>
     )
   }
 }
