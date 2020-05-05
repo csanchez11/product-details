@@ -1,29 +1,66 @@
 import React from 'react';
 import styled from "styled-components";
 
+const Wrapper = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-column-gaps: 3em;
+gird-template-rows: 1fr;
+background-color: #fafafa;
+color: #000;
+margin: 0 auto;
+width: 100%;
+height: 100%;
+max-height: 500px;
+padding: 2rem;
+`;
+
+const WhyMade = styled.div`
+background: none;
+height: 100%;
+padding: 0 2em 0 0;
+`;
+
+const H2 = styled.h2`
+width: 100%;
+border: 20px;
+font-size: 4em;
+`;
+
+const PhotoDiv = styled.div`
+grid-column: 2 / span 2;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+background: none;
+`;
+
+const Img = styled.img`
+width: 100%;
+height: auto;
+max-height: 500px;
+`;
+
 
 const WhyMadeHeader = (props) => {
     return (
-      <div id="wrapper">
-        <div id="whyMade">
-          <h2 id="whyMade-header">
+      <Wrapper>
+        <WhyMade>
+          <H2 id="whyMade-header">
             Why we
           <br></br>
             made this
-          </h2>
+          </H2>
           <p id="whyMade-paragraph">{props.product.why_we_made_this}</p>
-        </div>
-        <div id="image-section">
-          <span>
-            <picture id="whyMadeImage1">
-              <img src={props.product.imgurl1} />
-            </picture>
-            <picture id="whyMadeImage2">
-              <img src={props.product.imgurl2} />
-            </picture>
-          </span>
-        </div>
-      </div>
+        </WhyMade>
+        <PhotoDiv>
+          <div id="whyMadeImage1">
+            <Img src={props.product.imgurl1} />
+          </div>
+          <div id="whyMadeImage2">
+            <Img src={props.product.imgurl2} />
+          </div>
+        </PhotoDiv>
+      </Wrapper>
     )
 };
 

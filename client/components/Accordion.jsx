@@ -2,12 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AccordWrapper = styled.div`
+display: block;
+width: 100%;
 `;
 
 const OuterAccord = styled.div`
+width: 100%;
+cursor: pointer;
 `;
 
 const InnerAccord = styled.div`
+display: inline-block;
+width: 100%;
 background-color: #EEE;
 opacity: ${props => (props.open ? "1" : "0")};
 max-height: ${props => (props.open ? "100%" : "0")};
@@ -15,6 +21,7 @@ overflow: hidden;
 padding: ${props => (props.open ? "15px" : "0 15px")};
 transition: all 0.3s;
 `;
+
 
 
 export default class Accordion extends React.Component {
