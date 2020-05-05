@@ -1,20 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import bootstrap from 'react-bootstrap';
 
 const AccordWrapper = styled.div`
 display: block;
+padding-bottom: 20px;
 width: 100%;
 `;
 
 const OuterAccord = styled.div`
 width: 100%;
 cursor: pointer;
+padding: 1px;
 `;
 
 const InnerAccord = styled.div`
 display: inline-block;
 width: 100%;
-background-color: #EEE;
 opacity: ${props => (props.open ? "1" : "0")};
 max-height: ${props => (props.open ? "100%" : "0")};
 overflow: hidden;
@@ -22,6 +24,29 @@ padding: ${props => (props.open ? "15px" : "0 15px")};
 transition: all 0.3s;
 `;
 
+const Icon = styled.img`
+padding-left: 3rem;
+padding-right: 1rem;
+height: 50px;
+vertical-align: middle;
+`;
+
+const Span = styled.span`
+display: inline-block;
+font-size: 1.5em;
+vertical-align: middle;
+`;
+
+const GridDiv = styled.div`
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-column-gap: 25px;
+`;
+
+const GridItem = styled.div`
+grid-column: span 1;
+background-color: #EEE;
+`;
 
 
 export default class Accordion extends React.Component {
@@ -56,20 +81,20 @@ export default class Accordion extends React.Component {
       <AccordWrapper>
         <div>
           <h3>
-            <svg></svg>
-            <span>Designed for {this.props.designed_for}</span>
+            <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon1.png"></Icon>
+            <Span>Designed for {this.props.designed_for}</Span>
           </h3>
         </div>
         <OuterAccord id="hero-prod-feature" onClick={this.toggleHeroOpen}>
-          <div id="accordion-grid">
+          <div>
             <h3>
-              <svg></svg>
-              <span>{this.props.features[0]}</span>
+              <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon2.png"></Icon>
+              <Span>{this.props.features[0]}</Span>
               <div id="plus-minus"></div>
             </h3>
           </div>
           <InnerAccord open={this.state.heroFeatureOpen}>
-            <div id="grid-inner-accord">
+            <GridDiv>
               <ul id="feature-list">
                 <li key="1">
                   <span >{this.props.features[1]}</span>
@@ -81,19 +106,19 @@ export default class Accordion extends React.Component {
                   <span>{this.props.features[3]}</span>
                 </li>
               </ul>
-            </div>
+            </GridDiv>
           </InnerAccord>
         </OuterAccord>
         <OuterAccord id="prod-feature-container" onClick={this.toggleProdsOpen}>
-          <div id="accordion-grid">
+          <div>
             <h3>
-              <svg></svg>
-              <span> Product Features </span>
+              <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon4.png"></Icon>
+              <Span> Product Features </Span>
               <div id="plus-minus"></div>
             </h3>
           </div>
           <InnerAccord open={this.state.productFeaturesOpen}>
-            <div id="grid-inner-accord">
+            <GridDiv>
               <ul>
                 {this.props.features.slice(4).map((element, index) => {
                   return (
@@ -104,19 +129,19 @@ export default class Accordion extends React.Component {
                 })
                 }
               </ul>
-            </div>
+            </GridDiv>
           </InnerAccord>
         </OuterAccord>
         <OuterAccord id="materials-care" onClick={this.toggleMaterialsOpen}>
           <div id="accordion-grid">
             <h3>
-              <svg></svg>
-              <span>Materials and care</span>
+              <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon5.png"></Icon>
+              <Span>Materials and care</Span>
               <div id="plus-minus"></div>
             </h3>
           </div>
           <InnerAccord open={this.state.materialsOpen}>
-            <div id="grid-inner-accord">
+            <GridDiv>
               <div id="materials-text">Materials</div>
               <ul id="material-list">
                 <li>
@@ -147,7 +172,7 @@ export default class Accordion extends React.Component {
                   <span>Imported</span>
                 </li>
               </ul>
-            </div>
+            </GridDiv>
           </InnerAccord>
         </OuterAccord>
       </AccordWrapper>
