@@ -16,6 +16,13 @@ border-top-style: solid;
 border-color: #EEE;
 `;
 
+const OuterAccordGrid = styled.div`
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-gap: 10px;
+padding: 0 3rem;
+`;
+
 const InnerAccord = styled.div`
 display: inline-block;
 width: 100%;
@@ -27,7 +34,6 @@ transition: all 0.3s;
 `;
 
 const Icon = styled.img`
-padding-left: 3rem;
 padding-right: 1rem;
 height: 50px;
 vertical-align: middle;
@@ -38,17 +44,19 @@ display: inline-block;
 font-size: 2em;
 vertical-align: middle;
 font-weight: bolder;
+font-family: calibreSemi;
 `;
 
 const GridDiv = styled.div`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-gap: 25px;
+padding: 0 3rem;
 `;
 
 const GridTitle = styled.div`
 grid-column: span 3;
-font-weight: 900;
+font-family: calibreSemi;
 `;
 
 const GridItem = styled.div`
@@ -59,6 +67,23 @@ padding: 20px;
 font-size: 1.2em;
 `;
 
+const PlusMinusContainer = styled.div`
+grid-column: 3;
+position: absolute;
+right: 50px;
+`;
+
+const Plus = styled.img`
+max-height: 50px;
+width: auto;
+position: absolute;
+opacity: ${props => (props.open ? "0" : "1")};
+`;
+const Minus = styled.img`
+max-height: 50px;
+width: auto;
+position: absolute;
+`;
 
 export default class Accordion extends React.Component {
   constructor(props){
@@ -90,21 +115,26 @@ export default class Accordion extends React.Component {
   render() {
     return (
       <AccordWrapper>
-          <div>
+          <GridDiv>
             <h3>
               <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon1.png"></Icon>
               <Span>Designed for {this.props.designed_for}</Span>
               <div></div>
             </h3>
-          </div>
+          </GridDiv>
         <OuterAccord id="hero-prod-feature" onClick={this.toggleHeroOpen}>
-          <div>
+          <GridDiv>
             <h3>
               <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon2.png"></Icon>
               <Span>{this.props.features[0]}</Span>
-              <div id="plus-minus"></div>
             </h3>
-          </div>
+            <PlusMinusContainer>
+              <div style={{ position: 'relative' }}>
+                <Plus src="https://lulu-fec.s3.us-east-2.amazonaws.com/Plus.png" open={this.state.heroFeatureOpen}></Plus>
+                <Minus src="https://lulu-fec.s3.us-east-2.amazonaws.com/Minus.png"></Minus>
+              </div>
+            </PlusMinusContainer>
+          </GridDiv>
           <InnerAccord open={this.state.heroFeatureOpen}>
             <GridDiv>
               <GridItem key="1">
@@ -120,13 +150,18 @@ export default class Accordion extends React.Component {
           </InnerAccord>
         </OuterAccord>
         <OuterAccord id="prod-feature-container" onClick={this.toggleProdsOpen}>
-          <div>
+          <GridDiv>
             <h3>
               <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon4.png"></Icon>
               <Span> Product Features </Span>
-              <div id="plus-minus"></div>
             </h3>
-          </div>
+            <PlusMinusContainer>
+              <div style={{ position: 'relative' }}>
+                <Plus src="https://lulu-fec.s3.us-east-2.amazonaws.com/Plus.png" open={this.state.productFeaturesOpen}></Plus>
+                <Minus src="https://lulu-fec.s3.us-east-2.amazonaws.com/Minus.png"></Minus>
+              </div>
+            </PlusMinusContainer>
+          </GridDiv>
           <InnerAccord open={this.state.productFeaturesOpen}>
             <GridDiv>
               {this.props.features.slice(4).map((element, index) => {
@@ -141,13 +176,18 @@ export default class Accordion extends React.Component {
           </InnerAccord>
         </OuterAccord>
         <OuterAccord id="materials-care" onClick={this.toggleMaterialsOpen}>
-          <div id="accordion-grid">
+          <GridDiv id="accordion-grid">
             <h3>
               <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon5.png"></Icon>
               <Span>Materials and care</Span>
-              <div id="plus-minus"></div>
             </h3>
-          </div>
+            <PlusMinusContainer>
+              <div style={{ position: 'relative' }}>
+                <Plus src="https://lulu-fec.s3.us-east-2.amazonaws.com/Plus.png" open={this.state.materialsOpen}></Plus>
+                <Minus src="https://lulu-fec.s3.us-east-2.amazonaws.com/Minus.png"></Minus>
+              </div>
+            </PlusMinusContainer>
+          </GridDiv>
           <InnerAccord open={this.state.materialsOpen}>
             <GridDiv>
               <GridTitle>Materials</GridTitle>

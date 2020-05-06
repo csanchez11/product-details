@@ -20,15 +20,14 @@ const WhyMade = styled.div`
 background: none;
 height: 100%;
 padding: 0 2em 0 0;
-font-style: bolder;
 `;
 
 const H2 = styled.h2`
 width: 100%;
 max-height: 100%;
 border: 20px;
-font-weight: bolder;
-font-size: 5em;
+font-family: calibreBold;
+font-size: 5.5em;
 `;
 
 const PhotoDiv = styled.div`

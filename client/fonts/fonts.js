@@ -8,10 +8,23 @@ import calibreBlack from './CalibreBlack.woff'
 export default createGlobalStyle`
     @font-face {
         font-family: 'calibre';
-        src: local('calibre'), local('calibreSemi'), local('calibreBold'), local('calibreBlack'),
-        url(${calibre}) format('woff'),
+        src: local('calibre'),
+        url(${calibre}) format('woff');
+    }
+    @font-face {
+        font-family: 'calibreSemi';
+        src: local('calibreSemi'),
         url(${calibreSemi}) format('woff');
+    }
+    @font-face {
+        font-family: 'calibreBold';
+        src: local('calibreBold'),
         url(${calibreBold}) format('woff');
-
+    }
+    @font-face {
+        font-family: 'calibreBlack';
+        src: local('calibreBlack'),
+        url(${calibreBlack}) format('woff');
     }
 `;
+
