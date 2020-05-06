@@ -17,7 +17,12 @@ module.exports = {
         query: {
           presets: ['react', 'env']
        }
-      }
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+        exclude: /node_modules/,
+        loader: "file-loader"
+      },
     ]
   }
 };

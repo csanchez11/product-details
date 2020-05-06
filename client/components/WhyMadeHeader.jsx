@@ -13,18 +13,22 @@ width: 100%;
 height: 100%;
 max-height: 500px;
 padding: 2rem;
+font-family: calibre;
 `;
 
 const WhyMade = styled.div`
 background: none;
 height: 100%;
 padding: 0 2em 0 0;
+font-style: bolder;
 `;
 
 const H2 = styled.h2`
 width: 100%;
+max-height: 100%;
 border: 20px;
-font-size: 4em;
+font-weight: bolder;
+font-size: 5em;
 `;
 
 const PhotoDiv = styled.div`
@@ -35,7 +39,7 @@ background: none;
 `;
 
 const Img = styled.img`
-width: 100%;
+width: auto;
 height: auto;
 max-height: 500px;
 `;

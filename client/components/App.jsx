@@ -3,6 +3,8 @@ import WhyMadeHeader from './WhyMadeHeader.jsx'
 import Accordion from './Accordion.jsx'
 import axios from 'axios';
 import styled from "styled-components";
+import GlobalFonts from '../fonts/fonts';
+
 
 export default class App extends React.Component {
   constructor(props){
@@ -29,7 +31,7 @@ export default class App extends React.Component {
   }
 
   getProduct(){
-    let id = Math.floor(Math.random() * 100)
+    let id = (Math.floor(Math.random() * 99) + 1)
     axios.get(`/products/${id}`)
       .then(res => {
         this.setState({
@@ -43,6 +45,7 @@ export default class App extends React.Component {
   render(){
     return (
       <div>
+        <GlobalFonts />
         <WhyMadeHeader product={this.state.product}/>
         <Accordion
           features={this.state.features}

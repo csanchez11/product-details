@@ -1,17 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
-import bootstrap from 'react-bootstrap';
+
 
 const AccordWrapper = styled.div`
 display: block;
-padding-bottom: 20px;
 width: 100%;
+font-family: calibre;
 `;
 
 const OuterAccord = styled.div`
 width: 100%;
 cursor: pointer;
-padding: 1px;
+border: 1px;
+border-top-style: solid;
+border-color: #EEE;
 `;
 
 const InnerAccord = styled.div`
@@ -33,19 +35,28 @@ vertical-align: middle;
 
 const Span = styled.span`
 display: inline-block;
-font-size: 1.5em;
+font-size: 2em;
 vertical-align: middle;
+font-weight: bolder;
 `;
 
 const GridDiv = styled.div`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-column-gap: 25px;
+grid-gap: 25px;
+`;
+
+const GridTitle = styled.div`
+grid-column: span 3;
+font-weight: 900;
 `;
 
 const GridItem = styled.div`
 grid-column: span 1;
-background-color: #EEE;
+background-color: #fafafa;
+border-radius: .25rem;
+padding: 20px;
+font-size: 1.2em;
 `;
 
 
@@ -79,12 +90,13 @@ export default class Accordion extends React.Component {
   render() {
     return (
       <AccordWrapper>
-        <div>
-          <h3>
-            <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon1.png"></Icon>
-            <Span>Designed for {this.props.designed_for}</Span>
-          </h3>
-        </div>
+          <div>
+            <h3>
+              <Icon src="https://lulu-fec.s3.us-east-2.amazonaws.com/icon1.png"></Icon>
+              <Span>Designed for {this.props.designed_for}</Span>
+              <div></div>
+            </h3>
+          </div>
         <OuterAccord id="hero-prod-feature" onClick={this.toggleHeroOpen}>
           <div>
             <h3>
@@ -95,17 +107,15 @@ export default class Accordion extends React.Component {
           </div>
           <InnerAccord open={this.state.heroFeatureOpen}>
             <GridDiv>
-              <ul id="feature-list">
-                <li key="1">
-                  <span >{this.props.features[1]}</span>
-                </li>
-                <li key="2">
-                  <span>{this.props.features[2]}</span>
-                </li>
-                <li key="3">
-                  <span>{this.props.features[3]}</span>
-                </li>
-              </ul>
+              <GridItem key="1">
+                <span >{this.props.features[1]}</span>
+                </GridItem>
+              <GridItem key="2">
+                <span>{this.props.features[2]}</span>
+              </GridItem>
+              <GridItem key="3">
+                <span>{this.props.features[3]}</span>
+              </GridItem>
             </GridDiv>
           </InnerAccord>
         </OuterAccord>
@@ -119,16 +129,14 @@ export default class Accordion extends React.Component {
           </div>
           <InnerAccord open={this.state.productFeaturesOpen}>
             <GridDiv>
-              <ul>
-                {this.props.features.slice(4).map((element, index) => {
-                  return (
-                    <li key={index}>
-                      <span >{element}</span>
-                    </li>
-                  )
-                })
-                }
-              </ul>
+              {this.props.features.slice(4).map((element, index) => {
+                return (
+                  <GridItem key={index}>
+                    <span >{element}</span>
+                  </GridItem>
+                )
+              })
+              }
             </GridDiv>
           </InnerAccord>
         </OuterAccord>
@@ -142,36 +150,32 @@ export default class Accordion extends React.Component {
           </div>
           <InnerAccord open={this.state.materialsOpen}>
             <GridDiv>
-              <div id="materials-text">Materials</div>
-              <ul id="material-list">
-                <li>
+              <GridTitle>Materials</GridTitle>
+                <GridItem>
                   <span>{this.props.materials}</span>
-                </li>
-              </ul>
-              <div id="care-text">Care</div>
-              <ul id="care-list">
-                <li>
+                </GridItem>
+              <GridTitle>Care</GridTitle>
+                <GridItem>
                   <span>Wash with like colours</span>
-                </li>
-                <li>
+                </GridItem>
+                <GridItem>
                   <span>Machine wash cold</span>
-                </li>
-                <li>
+                </GridItem>
+                <GridItem>
                   <span>Do not bleach</span>
-                </li>
-                <li>
+                </GridItem>
+                <GridItem>
                   <span>Tumble dry low</span>
-                </li>
-                <li>
+                </GridItem>
+                <GridItem>
                   <span>Do not iron</span>
-                </li>
-                <li>
+                </GridItem>
+                <GridItem>
                   <span>Do not dry clean</span>
-                </li>
-                <li>
+                </GridItem>
+                <GridItem>
                   <span>Imported</span>
-                </li>
-              </ul>
+                </GridItem>
             </GridDiv>
           </InnerAccord>
         </OuterAccord>
