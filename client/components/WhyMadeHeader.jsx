@@ -25,9 +25,10 @@ padding: 0 2em 0 0;
 const H2 = styled.h2`
 width: 100%;
 max-height: 100%;
-border: 20px;
-font-family: calibreBold;
-font-size: 5.5em;
+font-family: calibreSemi;
+font-size: 6em;
+margin-top: 0;
+margin-bottom:0;
 `;
 
 const PhotoDiv = styled.div`
@@ -43,6 +44,11 @@ height: auto;
 max-height: 500px;
 `;
 
+const Redline = styled.img`
+width: auto;
+height: auto;
+max-width: 40px;
+`;
 
 const WhyMadeHeader = (props) => {
     return (
@@ -53,6 +59,7 @@ const WhyMadeHeader = (props) => {
           <br></br>
             made this
           </H2>
+          <Redline src="https://lulu-fec.s3.us-east-2.amazonaws.com/Redline.png"/>
           <p id="whyMade-paragraph">{props.product.why_we_made_this}</p>
         </WhyMade>
         <PhotoDiv>
