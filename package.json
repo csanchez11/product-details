@@ -10,7 +10,7 @@
     "build": "webpack -d --watch",
     "start": "nodemon server/index.js",
     "db-seed": "node ./DB/seed.js",
-    "test": "jest --verbose --forceExit"
+    "test": "jest --verbose --forceExit --detectOpenHandles"
   },
   "dependencies": {
     "axios": "^0.19.0",
