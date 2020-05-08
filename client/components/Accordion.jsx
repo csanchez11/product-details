@@ -149,13 +149,13 @@ export default class Accordion extends React.Component {
           </TitleGrid>
           <InnerAccord open={this.state.heroFeatureOpen}>
             <GridDiv>
-              <GridItem key="1">
+              <GridItem key="1" id="feature">
                 <span >{this.props.features[1]}</span>
                 </GridItem>
-              <GridItem key="2">
+              <GridItem key="2" id="feature">
                 <span>{this.props.features[2]}</span>
               </GridItem>
-              <GridItem key="3">
+              <GridItem key="3" id="feature">
                 <span>{this.props.features[3]}</span>
               </GridItem>
             </GridDiv>

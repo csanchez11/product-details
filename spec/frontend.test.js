@@ -20,7 +20,7 @@ afterAll(() => {
   browser.close();
 });
 
-describe('search function', () => {
+describe('Page Rendering Tests', () => {
 
   //tells the test to wait until the network requests are idle before running test.
   beforeEach(async () => {
@@ -40,4 +40,21 @@ describe('search function', () => {
     const title = await page.$eval(div, e => e.textContent);
     expect(title).toEqual('Materials and care')
   })
+
+  test('Hero Product Feature Accordion has three sub-features', async () => {
+    //selects div using css styling
+    const subFeatureCount = await page.$$eval('#feature', features => features.length);
+    expect(subFeatureCount).toEqual(3)
+  })
+
 });
+
+// describe('AJAX Tests', () => {
+
+//   test('Get Product will pull product', async () => {
+//     //selects div using css styling
+//     const product = await getProduct();
+//     expect(product).toEqual(3)
+//   })
+
+// });

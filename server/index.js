@@ -29,3 +29,6 @@ app.get('/products/:id', (req, res) => {
 
 
 app.listen(port, () => console.log(`App listening at http://localhost:${port}`))
+
+// exporting for use in tests
+module.exports = app;
