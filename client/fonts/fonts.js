@@ -1,17 +1,15 @@
 import { createGlobalStyle } from 'styled-components';
 
-import calibre from './CalibreRegular.woff';
-import calibreSemi from './CalibreSemibold.woff';
+const calibre = 'https://lulu-fec.s3.us-east-2.amazonaws.com/CalibreRegular.woff';
+const calibreSemi = 'https://lulu-fec.s3.us-east-2.amazonaws.com/CalibreSemibold.woff';
 
 export default createGlobalStyle`
     @font-face {
         font-family: 'calibre';
-        src: local('calibre'),
-        url(${calibre}) format('woff');
+        src: url(${calibre});
     }
     @font-face {
         font-family: 'calibreSemi';
-        src: local('calibreSemi'),
-        url(${calibreSemi}) format('woff');
+        src: url(${calibreSemi});
     }
 `;

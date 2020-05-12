@@ -566,7 +566,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _templateObject = _taggedTemplateLiteral(['\\n    @font-face {\\n        font-family: \\'calibre\\';\\n        src: local(\\'calibre\\'),\\n        url(', ') format(\\'woff\\');\\n    }\\n    @font-face {\\n        font-family: \\'calibreSemi\\';\\n        src: local(\\'calibreSemi\\'),\\n        url(', ') format(\\'woff\\');\\n    }\\n'], ['\\n    @font-face {\\n        font-family: \\'calibre\\';\\n        src: local(\\'calibre\\'),\\n        url(', ') format(\\'woff\\');\\n    }\\n    @font-face {\\n        font-family: \\'calibreSemi\\';\\n        src: local(\\'calibreSemi\\'),\\n        url(', ') format(\\'woff\\');\\n    }\\n']);\n\nvar _styledComponents = __webpack_require__(/*! styled-components */ 4);\n\nvar _CalibreRegular = __webpack_require__(/*! ./CalibreRegular.woff */ 45);\n\nvar _CalibreRegular2 = _interopRequireDefault(_CalibreRegular);\n\nvar _CalibreSemibold = __webpack_require__(/*! ./CalibreSemibold.woff */ 46);\n\nvar _CalibreSemibold2 = _interopRequireDefault(_CalibreSemibold);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\nexports.default = (0, _styledComponents.createGlobalStyle)(_templateObject, _CalibreRegular2.default, _CalibreSemibold2.default);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDEuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vY2xpZW50L2ZvbnRzL2ZvbnRzLmpzPzQ3ZmYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3JlYXRlR2xvYmFsU3R5bGUgfSBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmltcG9ydCBjYWxpYnJlIGZyb20gJy4vQ2FsaWJyZVJlZ3VsYXIud29mZic7XG5pbXBvcnQgY2FsaWJyZVNlbWkgZnJvbSAnLi9DYWxpYnJlU2VtaWJvbGQud29mZic7XG5cbmV4cG9ydCBkZWZhdWx0IGNyZWF0ZUdsb2JhbFN0eWxlYFxuICAgIEBmb250LWZhY2Uge1xuICAgICAgICBmb250LWZhbWlseTogJ2NhbGlicmUnO1xuICAgICAgICBzcmM6IGxvY2FsKCdjYWxpYnJlJyksXG4gICAgICAgIHVybCgke2NhbGlicmV9KSBmb3JtYXQoJ3dvZmYnKTtcbiAgICB9XG4gICAgQGZvbnQtZmFjZSB7XG4gICAgICAgIGZvbnQtZmFtaWx5OiAnY2FsaWJyZVNlbWknO1xuICAgICAgICBzcmM6IGxvY2FsKCdjYWxpYnJlU2VtaScpLFxuICAgICAgICB1cmwoJHtjYWxpYnJlU2VtaX0pIGZvcm1hdCgnd29mZicpO1xuICAgIH1cbmA7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIGNsaWVudC9mb250cy9mb250cy5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTs7O0FBQUE7QUFDQTs7Ozs7OztBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///41\n");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _templateObject = _taggedTemplateLiteral(['\\n    @font-face {\\n        font-family: \\'calibre\\';\\n        src: url(', ');\\n    }\\n    @font-face {\\n        font-family: \\'calibreSemi\\';\\n        src: url(', ');\\n    }\\n'], ['\\n    @font-face {\\n        font-family: \\'calibre\\';\\n        src: url(', ');\\n    }\\n    @font-face {\\n        font-family: \\'calibreSemi\\';\\n        src: url(', ');\\n    }\\n']);\n\nvar _styledComponents = __webpack_require__(/*! styled-components */ 4);\n\nfunction _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }\n\nvar calibre = 'https://lulu-fec.s3.us-east-2.amazonaws.com/CalibreRegular.woff';\nvar calibreSemi = 'https://lulu-fec.s3.us-east-2.amazonaws.com/CalibreSemibold.woff';\n\nexports.default = (0, _styledComponents.createGlobalStyle)(_templateObject, calibre, calibreSemi);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDEuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vY2xpZW50L2ZvbnRzL2ZvbnRzLmpzPzQ3ZmYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY3JlYXRlR2xvYmFsU3R5bGUgfSBmcm9tICdzdHlsZWQtY29tcG9uZW50cyc7XG5cbmNvbnN0IGNhbGlicmUgPSAnaHR0cHM6Ly9sdWx1LWZlYy5zMy51cy1lYXN0LTIuYW1hem9uYXdzLmNvbS9DYWxpYnJlUmVndWxhci53b2ZmJztcbmNvbnN0IGNhbGlicmVTZW1pID0gJ2h0dHBzOi8vbHVsdS1mZWMuczMudXMtZWFzdC0yLmFtYXpvbmF3cy5jb20vQ2FsaWJyZVNlbWlib2xkLndvZmYnO1xuXG5leHBvcnQgZGVmYXVsdCBjcmVhdGVHbG9iYWxTdHlsZWBcbiAgICBAZm9udC1mYWNlIHtcbiAgICAgICAgZm9udC1mYW1pbHk6ICdjYWxpYnJlJztcbiAgICAgICAgc3JjOiB1cmwoJHtjYWxpYnJlfSk7XG4gICAgfVxuICAgIEBmb250LWZhY2Uge1xuICAgICAgICBmb250LWZhbWlseTogJ2NhbGlicmVTZW1pJztcbiAgICAgICAgc3JjOiB1cmwoJHtjYWxpYnJlU2VtaX0pO1xuICAgIH1cbmA7XG5cblxuLy8gV0VCUEFDSyBGT09URVIgLy9cbi8vIGNsaWVudC9mb250cy9mb250cy5qcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFBQTtBQUNBOzs7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///41\n");
 
 /***/ }),
 /* 42 */
@@ -583,30 +583,8 @@ eval("\n\nvar _reactDom = __webpack_require__(/*! react-dom */ 17);\n\nvar _reac
 /***/ }),
 /* 43 */,
 /* 44 */,
-/* 45 */
-/* exports provided: default */
-/* all exports used */
-/*!******************************************!*\
-  !*** ./client/fonts/CalibreRegular.woff ***!
-  \******************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"6db2f95e7b6e9876df68cd89c53e6ad0.woff\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDUuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jbGllbnQvZm9udHMvQ2FsaWJyZVJlZ3VsYXIud29mZj8zOWE0Il0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBkZWZhdWx0IF9fd2VicGFja19wdWJsaWNfcGF0aF9fICsgXCI2ZGIyZjk1ZTdiNmU5ODc2ZGY2OGNkODljNTNlNmFkMC53b2ZmXCI7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9jbGllbnQvZm9udHMvQ2FsaWJyZVJlZ3VsYXIud29mZlxuLy8gbW9kdWxlIGlkID0gNDVcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///45\n");
-
-/***/ }),
-/* 46 */
-/* exports provided: default */
-/* all exports used */
-/*!*******************************************!*\
-  !*** ./client/fonts/CalibreSemibold.woff ***!
-  \*******************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"57e416647775a26b3e1e90962dc8d062.woff\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNDYuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jbGllbnQvZm9udHMvQ2FsaWJyZVNlbWlib2xkLndvZmY/YjQyYSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArIFwiNTdlNDE2NjQ3Nzc1YTI2YjNlMWU5MDk2MmRjOGQwNjIud29mZlwiO1xuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vY2xpZW50L2ZvbnRzL0NhbGlicmVTZW1pYm9sZC53b2ZmXG4vLyBtb2R1bGUgaWQgPSA0NlxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///46\n");
-
-/***/ }),
+/* 45 */,
+/* 46 */,
 /* 47 */
 /* no static exports found */
 /* exports used: default */
