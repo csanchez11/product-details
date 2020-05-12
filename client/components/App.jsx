@@ -32,7 +32,10 @@ export default class App extends React.Component {
 
   getProduct(){
     let id = (Math.floor(Math.random() * 99) + 1)
-    axios.get(`/products/${id}`)
+    axios.get(`http://localhost:3010/products/${id}`, {headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json'
+    }})
       .then(res => {
         this.setState({
           product: res.data,

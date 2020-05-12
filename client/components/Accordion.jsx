@@ -74,13 +74,11 @@ grid-gap: 25px;
 padding: 0 3rem;
 `;
 
-
 const PlusMinusContainer = styled.div`
 grid-column: 2;
 display: flex;
 align-items: center;
 justify-content: center;
-
 `;
 
 const Plus = styled.img`
@@ -235,30 +233,3 @@ export default class Accordion extends React.Component {
     )
   }
 }
-
-
-/*
-  Div - "Designed for" container
-    Div - grid inside
-      h3
-        svg - icon for below sport
-        span - Designed for ___
-  Div - First prod Feature container
-    Div - grid inside
-      h3
-        svg - icon
-        span - First Feature Name
-        div - plus minus 30 x 2.25 px
-          svg - plus minus icon
-    Div - Inner Accordion item (collapses)
-      Div - INner grid
-        Ul - List of features
-          Li - Feature
-            Span - Feature Text
-          Li - Feature
-            Span - Feature Text
-          Li - Feature
-            Span - Feature Text
-  Div - "Product Features" container
-  Div - "Material and Care"
-*/
