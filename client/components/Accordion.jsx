@@ -6,6 +6,8 @@ const AccordWrapper = styled.div`
 display: block;
 width: 100%;
 font-family: calibre;
+background-color: #fff;
+padding-top: 1em;
 `;
 
 const OuterAccord = styled.div`
@@ -41,7 +43,7 @@ vertical-align: middle;
 
 const Span = styled.span`
 display: inline-block;
-font-size: 2em;
+font-size: 1.5em;
 vertical-align: middle;
 font-weight: bolder;
 font-family: calibreSemi;
@@ -71,7 +73,7 @@ const TitleGrid = styled.div`
 display: grid;
 grid-template-columns: 11fr 1fr;
 grid-gap: 25px;
-padding: 0 3rem;
+padding: 1rem 3rem;
 `;
 
 const PlusMinusContainer = styled.div`
