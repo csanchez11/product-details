@@ -32,7 +32,7 @@ opacity: ${props => (props.open ? "1" : "0")};
 max-height: ${props => (props.open ? "100%" : "0")};
 overflow: hidden;
 padding: ${props => (props.open ? "15px" : "0 15px")};
-transition: all 0.3s;
+transition: all 0.6s;
 `;
 
 const Icon = styled.img`
@@ -87,7 +87,7 @@ const Plus = styled.img`
 max-height: 50px;
 width: auto;
 position: absolute;
-transition: 0.3s;
+transition: 0.6s;
 transform: ${props => (props.open ? "rotate(0deg)" : "rotate(90deg)")};
 `;
 
